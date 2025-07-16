@@ -1,86 +1,50 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../Logo'
+import React from 'react';
 
-function Footer() {
+const Footer = () => {
   return (
-    <section className="relative overflow-hidden py-10 bg-gray-900 text-white border-t border-gray-700">
-      <div className="relative z-10 mx-auto max-w-7xl px-4">
-        <div className="-m-6 flex flex-wrap">
-          <div className="w-full p-6 md:w-1/2 lg:w-5/12">
-            <div className="flex h-full flex-col justify-between">
-              <div className="mb-4 inline-flex items-center">
-                <Logo className="inline-block w-40"/>
-              </div>
-              <div>
-                <p className="text-sm text-gray-400">
-                  &copy; Copyright 2023. All Rights Reserved by DevUI.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-            <div className="h-full">
-              <h3 className="tracking-widest mb-9 text-xs font-semibold uppercase text-gray-500">
-                Company
-              </h3>
-              <ul>
-                {['Features', 'Pricing', 'Affiliate Program', 'Press Kit'].map((item) => (
-                  <li key={item} className="mb-4">
-                    <Link
-                      className="text-base font-medium text-gray-300 hover:text-white transition-colors duration-200"
-                      to="/"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-            <div className="h-full">
-              <h3 className="tracking-widest mb-9 text-xs font-semibold uppercase text-gray-500">
-                Support
-              </h3>
-              <ul>
-                {['Account', 'Help', 'Contact Us', 'Customer Support'].map((item) => (
-                  <li key={item} className="mb-4">
-                    <Link
-                      className="text-base font-medium text-gray-300 hover:text-white transition-colors duration-200"
-                      to="/"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-3/12">
-            <div className="h-full">
-              <h3 className="tracking-widest mb-9 text-xs font-semibold uppercase text-gray-500">
-                Legals
-              </h3>
-              <ul>
-                {['Terms & Conditions', 'Privacy Policy', 'Licensing'].map((item) => (
-                  <li key={item} className="mb-4">
-                    <Link
-                      className="text-base font-medium text-gray-300 hover:text-white transition-colors duration-200"
-                      to="/"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+    <footer className="bg-gray-900 text-gray-400 py-10 px-4 md:px-6 font-sans">
+      <div className="max-w-6xl mx-auto flex flex-wrap justify-around gap-x-8 gap-y-10">
+        {/* Company Column */}
+        {/* Changed text-left to text-center for all sizes */}
+        <div className="flex-1 min-w-[150px] text-center">
+          <h4 className="text-white font-bold text-lg mb-4">COMPANY</h4>
+          <ul className="space-y-2">
+            <li><a href="/features" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Features</a></li>
+            <li><a href="/pricing" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Pricing</a></li>
+            <li><a href="/affiliate-program" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Affiliate Program</a></li>
+            <li><a href="/press-kit" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Press Kit</a></li>
+          </ul>
+        </div>
+
+        {/* Support Column */}
+        {/* Changed text-left to text-center for all sizes */}
+        <div className="flex-1 min-w-[150px] text-center">
+          <h4 className="text-white font-bold text-lg mb-4">SUPPORT</h4>
+          <ul className="space-y-2">
+            <li><a href="/account" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Account</a></li>
+            <li><a href="/help" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Help</a></li>
+            <li><a href="/contact-us" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Contact Us</a></li>
+            <li><a href="/customer-support" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Customer Support</a></li>
+          </ul>
+        </div>
+
+        {/* Legals Column */}
+        {/* Changed text-left to text-center for all sizes */}
+        <div className="flex-1 min-w-[150px] text-center">
+          <h4 className="text-white font-bold text-lg mb-4">LEGALS</h4>
+          <ul className="space-y-2">
+            <li><a href="/terms-conditions" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Terms & Conditions</a></li>
+            <li><a href="/privacy-policy" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Privacy Policy</a></li>
+            <li><a href="/licensing" className="text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300">Licensing</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-  )
-}
 
-export default Footer
+      <div className="text-center mt-10 pt-5 border-t border-gray-700 text-sm text-gray-500">
+        <p>&copy; Copyright 2023. All Rights Reserved by DevUI.</p>
+      </div>
+    </footer>
+  );
+};
 
+export default Footer;
