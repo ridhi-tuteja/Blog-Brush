@@ -23,7 +23,7 @@ function Home() {
         )
     }
   return (
-    <h2 className='text-center text-2xl font-bold'>Welcome to The Blog Space!</h2>
+    <h2 className='text-center text-2xl font-bold'>Welcome to Blog Sphere!</h2>
   )
 }
 
