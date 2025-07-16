@@ -43,7 +43,7 @@ function Header() {
         <nav className="flex items-center justify-between py-4">
           <Link to="/" className="flex items-center gap-2">
             <Logo className="inline-block w-3"/>
-            <span className="text-xl font-semibold hidden sm:inline">Blog Sphere</span>
+            <span className="text-xl font-semibold hidden sm:inline">Blog Brush</span>
           </Link>
           <ul className="flex items-center gap-4">
             {navItems.map((item) =>
